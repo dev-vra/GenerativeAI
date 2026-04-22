@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/GenerativeAI" : "";
+
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-    ],
-  },
+  output: "export",
+  basePath,
+  assetPrefix: basePath,
+  trailingSlash: true,
 };
 
 export default nextConfig;
