@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -10,14 +10,15 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+// Inter: fonte corporativa moderna (Stripe, Linear, Notion)
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-dm",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Bonini Engenharia | Ambiental e Florestal",
+  title: "Bonini Engenharia e Agronegócios",
   description:
     "Projetos ambientais, florestais e regularização fundiária com excelência técnica e compromisso com a natureza.",
 };
@@ -26,10 +27,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${cormorant.variable} ${dmSans.variable}`}
-    >
+    <html lang="pt-BR" className={`${cormorant.variable} ${inter.variable}`}>
       <body>
         <SmoothScroll>{children}</SmoothScroll>
       </body>

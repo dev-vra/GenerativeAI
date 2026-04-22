@@ -16,41 +16,73 @@ export default function Nav() {
   useEffect(() => {
     gsap.fromTo(
       navRef.current,
-      { y: -24, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1.4, delay: 0.6, ease: "power3.out" }
+      { y: -28, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.5, delay: 0.5, ease: "power3.out" }
     );
   }, []);
 
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-7"
-      style={{ opacity: 0 }}
+      style={{
+        position: "fixed", top: 0, left: 0, right: 0,
+        zIndex: 50,
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        padding: "1.4rem clamp(1.5rem, 5vw, 4rem)",
+        opacity: 0,
+      }}
     >
-      {/* Logo mark */}
-      <a
-        href="#hero"
-        className="nav-glow tracking-[0.25em] uppercase text-[var(--cream)] font-light text-sm"
-        style={{ fontFamily: "var(--font-cormorant)", fontSize: "1.1rem", letterSpacing: "0.3em" }}
-      >
-        Bonini
+      {/* Logo — imagem se existir, fallback em texto */}
+      <a href="#hero" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+        <img
+          src="/logo.png"
+          alt="Bonini Engenharia e Agronegócios"
+          style={{ height: "36px", width: "auto", filter: "brightness(0) invert(1)", opacity: 0.92 }}
+          onError={(e) => {
+            const img = e.currentTarget;
+            img.style.display = "none";
+            const fallback = img.nextElementSibling as HTMLElement;
+            if (fallback) fallback.style.display = "block";
+          }}
+        />
+        {/* Fallback texto caso a logo não exista ainda */}
+        <span
+          className="nav-glow"
+          style={{
+            display: "none",
+            fontFamily: "var(--font-dm)",
+            fontSize: "1rem",
+            fontWeight: 700,
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "var(--cream)",
+          }}
+        >
+          Bonini
+        </span>
       </a>
 
-      {/* Desktop links */}
-      <ul className="hidden md:flex gap-10">
+      {/* Links desktop */}
+      <ul style={{ display: "flex", gap: "2.5rem", listStyle: "none" }}>
         {links.map((l) => (
-          <li key={l.href}>
+          <li key={l.href} style={{ display: "none" }}
+            className="md-show"
+          >
             <a
               href={l.href}
-              className="nav-glow text-[0.72rem] tracking-[0.2em] uppercase text-[var(--cream-dim)] hover:text-[var(--cream)] transition-colors duration-300"
-              style={{ color: "rgba(237,232,220,0.7)" }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLElement).style.color = "var(--cream)")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLElement).style.color =
-                  "rgba(237,232,220,0.7)")
-              }
+              className="nav-glow"
+              style={{
+                fontFamily: "var(--font-dm)",
+                fontSize: "0.68rem",
+                fontWeight: 500,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "rgba(237,232,220,0.65)",
+                textDecoration: "none",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--cream)")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(237,232,220,0.65)")}
             >
               {l.label}
             </a>
@@ -58,13 +90,9 @@ export default function Nav() {
         ))}
       </ul>
 
-      {/* Mobile: hamburger placeholder */}
-      <button
-        className="nav-glow md:hidden text-[var(--cream)] text-xs tracking-widest uppercase"
-        aria-label="Menu"
-      >
-        Menu
-      </button>
+      <style>{`
+        @media (min-width: 768px) { .md-show { display: list-item !important; } }
+      `}</style>
     </nav>
   );
 }

@@ -4,132 +4,80 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useParallax } from "@/lib/useParallax";
 import { IMAGES } from "@/lib/images";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function HeroSection() {
-  const containerRef  = useRef<HTMLDivElement>(null);
-  const stickyRef     = useRef<HTMLDivElement>(null);
-
-  // Scroll-driven refs (outer wrapper)
-  const bgScrollRef    = useRef<HTMLDivElement>(null);
-  const leftScrollRef  = useRef<HTMLDivElement>(null);
-  const rightScrollRef = useRef<HTMLDivElement>(null);
+  const containerRef   = useRef<HTMLDivElement>(null);
+  const leftImgRef     = useRef<HTMLDivElement>(null);
+  const rightImgRef    = useRef<HTMLDivElement>(null);
   const textRef        = useRef<HTMLDivElement>(null);
   const taglineRef     = useRef<HTMLDivElement>(null);
+  const scrollHintRef  = useRef<HTMLDivElement>(null);
 
-  // Mouse parallax refs (inner wrapper)
-  const bgMouseRef    = useRef<HTMLDivElement>(null);
-  const leftMouseRef  = useRef<HTMLDivElement>(null);
-  const rightMouseRef = useRef<HTMLDivElement>(null);
+  // Parallax on floating images (different layers = different depth)
+  useParallax([
+    { ref: leftImgRef  as React.RefObject<HTMLElement>, factorX: -28, factorY: -18, duration: 1.0 },
+    { ref: rightImgRef as React.RefObject<HTMLElement>, factorX:  24, factorY:  20, duration: 0.8 },
+  ]);
 
   useGSAP(
     () => {
+      // ── Left image: enters from far left ─────────────────
+      gsap.fromTo(
+        leftImgRef.current,
+        { x: "-130%", opacity: 0 },
+        {
+          x: "0%", opacity: 1, ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "10% top", end: "55% top", scrub: 1.3,
+          },
+        }
+      );
+
+      // ── Right image: enters from far right ───────────────
+      gsap.fromTo(
+        rightImgRef.current,
+        { x: "130%", opacity: 0 },
+        {
+          x: "0%", opacity: 1, ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "20% top", end: "65% top", scrub: 1.3,
+          },
+        }
+      );
+
+      // ── Hero text entrance ────────────────────────────────
       const tl = gsap.timeline();
-
-      // ── BG: zoom out as user scrolls ──────────────────────
-      gsap.fromTo(
-        bgScrollRef.current,
-        { scale: 1.35 },
-        {
-          scale: 0.82,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top top",
-            end: "bottom top",
-            scrub: 1.8,
-          },
-        }
-      );
-
-      // ── Left image: enters from left ──────────────────────
-      gsap.fromTo(
-        leftScrollRef.current,
-        { x: "-120%", opacity: 0 },
-        {
-          x: "0%",
-          opacity: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "12% top",
-            end: "55% top",
-            scrub: 1.2,
-          },
-        }
-      );
-
-      // ── Right image: enters from right ───────────────────
-      gsap.fromTo(
-        rightScrollRef.current,
-        { x: "120%", opacity: 0 },
-        {
-          x: "0%",
-          opacity: 1,
-          ease: "none",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "22% top",
-            end: "65% top",
-            scrub: 1.2,
-          },
-        }
-      );
-
-      // ── Hero text reveal ──────────────────────────────────
       tl.fromTo(
         textRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.6, ease: "power3.out", delay: 0.3 }
+        { opacity: 0, y: 36, filter: "blur(8px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.8, ease: "power3.out", delay: 0.2 }
       ).fromTo(
         taglineRef.current,
-        { opacity: 0, y: 16 },
+        { opacity: 0, y: 18 },
         { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
-        "-=0.8"
+        "-=0.9"
+      ).fromTo(
+        scrollHintRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1, ease: "power2.out" },
+        "-=0.4"
       );
 
-      // ── Text floats up as scroll progresses ───────────────
-      gsap.to(textRef.current, {
-        y: -60,
-        opacity: 0,
+      // ── Text drifts up + fades as user scrolls past ───────
+      gsap.to([textRef.current, taglineRef.current], {
+        y: -80, opacity: 0,
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "30% top",
-          end: "60% top",
-          scrub: 1,
+          start: "28% top", end: "58% top", scrub: 1,
         },
       });
-
-      // ── Mouse / Touch parallax ────────────────────────────
-      const handleMouseMove = (e: MouseEvent) => {
-        const nx = (e.clientX - window.innerWidth  / 2) / window.innerWidth;
-        const ny = (e.clientY - window.innerHeight / 2) / window.innerHeight;
-
-        gsap.to(bgMouseRef.current,    { x: nx * 22,  y: ny * 16,  duration: 0.9, ease: "power1.out" });
-        gsap.to(leftMouseRef.current,  { x: nx * -32, y: ny * -22, duration: 0.9, ease: "power1.out" });
-        gsap.to(rightMouseRef.current, { x: nx * 28,  y: ny * 20,  duration: 0.9, ease: "power1.out" });
-      };
-
-      // Gyroscope fallback for mobile
-      const handleOrientation = (e: DeviceOrientationEvent) => {
-        const nx = ((e.gamma  ?? 0) / 45) * 0.6;
-        const ny = ((e.beta   ?? 0) / 45) * 0.4;
-
-        gsap.to(bgMouseRef.current,    { x: nx * 18,  y: ny * 12,  duration: 1, ease: "power1.out" });
-        gsap.to(leftMouseRef.current,  { x: nx * -24, y: ny * -18, duration: 1, ease: "power1.out" });
-        gsap.to(rightMouseRef.current, { x: nx * 22,  y: ny * 16,  duration: 1, ease: "power1.out" });
-      };
-
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("deviceorientation", handleOrientation);
-
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-        window.removeEventListener("deviceorientation", handleOrientation);
-      };
     },
     { scope: containerRef }
   );
@@ -138,220 +86,137 @@ export default function HeroSection() {
     <section
       id="hero"
       ref={containerRef}
-      style={{ height: "220vh", position: "relative" }}
+      style={{ height: "220vh", position: "relative", zIndex: 1 }}
     >
-      {/* Sticky viewport */}
       <div
-        ref={stickyRef}
         style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          overflow: "hidden",
-          background: "var(--forest-dark)",
+          position: "sticky", top: 0,
+          height: "100vh", overflow: "hidden",
+          display: "flex", alignItems: "center", justifyContent: "center",
         }}
       >
-        {/* ── BG Forest image ─────────────────────────────── */}
+        {/* ── Left floating torn image ─────────────────────── */}
         <div
-          ref={bgScrollRef}
+          ref={leftImgRef}
           style={{
             position: "absolute",
-            inset: "-8%",
-            willChange: "transform",
-          }}
-        >
-          <div ref={bgMouseRef} style={{ width: "100%", height: "100%" }}>
-            <img
-              src={IMAGES.heroForest}
-              alt="Floresta densa vista do alto"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center",
-              }}
-            />
-            {/* Dark vignette overlay */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "radial-gradient(ellipse at center, rgba(7,17,10,0.1) 0%, rgba(7,17,10,0.65) 100%)",
-                pointerEvents: "none",
-              }}
-            />
-          </div>
-        </div>
-
-        {/* ── Left torn image ─────────────────────────────── */}
-        <div
-          ref={leftScrollRef}
-          style={{
-            position: "absolute",
-            left: "-2%",
-            bottom: "8%",
-            width: "clamp(260px, 34vw, 520px)",
+            left: "clamp(-20px, -2vw, 10px)",
+            bottom: "clamp(4%, 8vh, 80px)",
+            width: "clamp(220px, 30vw, 460px)",
             aspectRatio: "3/4",
-            willChange: "transform",
             opacity: 0,
+            willChange: "transform",
+            zIndex: 3,
           }}
         >
           <div
-            ref={leftMouseRef}
             className="img-torn-2"
             style={{
-              width: "100%",
-              height: "100%",
-              transform: "rotate(-5deg) skewX(-0.8deg)",
-              filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.8))",
+              width: "100%", height: "100%",
+              transform: "rotate(-5deg) skewX(-0.6deg)",
+              filter: "drop-shadow(0 24px 56px rgba(0,0,0,0.85))",
             }}
           >
-            <img
-              src={IMAGES.forestLight}
-              alt="Floresta com luz"
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
+            <img src={IMAGES.forestLight} alt="Floresta"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
         </div>
 
-        {/* ── Right torn image ────────────────────────────── */}
+        {/* ── Right floating torn image ────────────────────── */}
         <div
-          ref={rightScrollRef}
+          ref={rightImgRef}
           style={{
             position: "absolute",
-            right: "-2%",
-            top: "6%",
-            width: "clamp(220px, 28vw, 440px)",
+            right: "clamp(-20px, -1vw, 15px)",
+            top: "clamp(5%, 8vh, 70px)",
+            width: "clamp(180px, 24vw, 380px)",
             aspectRatio: "4/5",
-            willChange: "transform",
             opacity: 0,
+            willChange: "transform",
+            zIndex: 3,
           }}
         >
           <div
-            ref={rightMouseRef}
             className="img-torn-3"
             style={{
-              width: "100%",
-              height: "100%",
-              transform: "rotate(4deg) skewY(0.5deg)",
-              filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.8))",
+              width: "100%", height: "100%",
+              transform: "rotate(4.5deg) skewY(0.4deg)",
+              filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.85))",
             }}
           >
-            <img
-              src={IMAGES.treeTrunk}
-              alt="Árvore nativa"
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-            />
+            <img src={IMAGES.treeTrunk} alt="Árvore nativa"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
         </div>
 
-        {/* ── Center text ─────────────────────────────────── */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            pointerEvents: "none",
-            zIndex: 10,
-          }}
-        >
+        {/* ── Center text ──────────────────────────────────── */}
+        <div style={{ position: "relative", zIndex: 10, textAlign: "center", pointerEvents: "none" }}>
           <div ref={textRef} style={{ opacity: 0 }}>
-            <p
-              className="nav-glow"
-              style={{
-                fontFamily: "var(--font-dm)",
-                fontSize: "clamp(0.6rem, 1.2vw, 0.8rem)",
-                letterSpacing: "0.35em",
-                textTransform: "uppercase",
-                color: "var(--forest-light)",
-                marginBottom: "1.2rem",
-              }}
-            >
+            <p className="nav-glow" style={{
+              fontFamily: "var(--font-dm)",
+              fontSize: "clamp(0.58rem, 1vw, 0.72rem)",
+              fontWeight: 500,
+              letterSpacing: "0.42em",
+              textTransform: "uppercase",
+              color: "var(--forest-light)",
+              marginBottom: "1.4rem",
+            }}>
               Engenharia Ambiental e Florestal
             </p>
 
-            <h1
-              className="nav-glow"
-              style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(3.5rem, 9vw, 8rem)",
-                fontWeight: 300,
-                lineHeight: 0.9,
-                letterSpacing: "-0.02em",
-                color: "var(--cream)",
-              }}
-            >
+            <h1 className="nav-glow" style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "clamp(4rem, 10vw, 9rem)",
+              fontWeight: 400,
+              lineHeight: 0.88,
+              letterSpacing: "-0.02em",
+              color: "var(--cream)",
+            }}>
               Bonini
             </h1>
           </div>
 
-          <div
-            ref={taglineRef}
-            style={{ opacity: 0, marginTop: "2rem" }}
-          >
-            <p
-              className="nav-glow"
-              style={{
-                fontFamily: "var(--font-cormorant)",
-                fontSize: "clamp(1rem, 2.2vw, 1.5rem)",
-                fontWeight: 300,
-                fontStyle: "italic",
-                color: "rgba(237,232,220,0.7)",
-                letterSpacing: "0.05em",
-              }}
-            >
+          <div ref={taglineRef} style={{ opacity: 0, marginTop: "2.2rem" }}>
+            <p className="nav-glow" style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "clamp(1rem, 2vw, 1.45rem)",
+              fontWeight: 300,
+              fontStyle: "italic",
+              color: "rgba(237,232,220,0.65)",
+              letterSpacing: "0.06em",
+            }}>
               Protegendo o que a terra oferece
             </p>
           </div>
         </div>
 
-        {/* ── Scroll hint ─────────────────────────────────── */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "2.5rem",
-            left: "50%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.5rem",
-            zIndex: 10,
-          }}
-        >
-          <p
-            className="nav-glow"
-            style={{
-              fontFamily: "var(--font-dm)",
-              fontSize: "0.6rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              color: "rgba(237,232,220,0.4)",
-            }}
-          >
+        {/* ── Scroll hint ───────────────────────────────────── */}
+        <div ref={scrollHintRef} style={{
+          position: "absolute", bottom: "2.5rem", left: "50%",
+          transform: "translateX(-50%)", opacity: 0,
+          display: "flex", flexDirection: "column", alignItems: "center", gap: "0.6rem",
+          zIndex: 10, pointerEvents: "none",
+        }}>
+          <p className="nav-glow" style={{
+            fontFamily: "var(--font-dm)", fontSize: "0.56rem",
+            letterSpacing: "0.38em", textTransform: "uppercase",
+            color: "rgba(237,232,220,0.35)", fontWeight: 500,
+          }}>
             Scroll
           </p>
-          <div
-            style={{
-              width: "1px",
-              height: "40px",
-              background: "linear-gradient(to bottom, rgba(237,232,220,0.4), transparent)",
-              animation: "scrollLine 1.8s ease-in-out infinite",
-            }}
-          />
+          <div style={{
+            width: "1px", height: "44px",
+            background: "linear-gradient(to bottom, rgba(157,191,142,0.5), transparent)",
+            animation: "scrollLine 1.8s ease-in-out infinite",
+          }} />
         </div>
       </div>
 
       <style>{`
         @keyframes scrollLine {
-          0%   { opacity: 0; transform: scaleY(0); transform-origin: top; }
-          50%  { opacity: 1; transform: scaleY(1); transform-origin: top; }
-          100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+          0%   { opacity:0; transform:scaleY(0); transform-origin:top; }
+          50%  { opacity:1; transform:scaleY(1); transform-origin:top; }
+          100% { opacity:0; transform:scaleY(1); transform-origin:bottom; }
         }
       `}</style>
     </section>
