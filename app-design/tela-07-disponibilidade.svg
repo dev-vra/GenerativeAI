@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="onlineSlot" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <linearGradient id="busySlot" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+    <linearGradient id="awaySlot" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd43b"/>
+      <stop offset="100%" style="stop-color:#fab005"/>
+    </linearGradient>
+    <linearGradient id="saveBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6c63ff"/>
+      <stop offset="100%" style="stop-color:#4a3ff7"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect width="390" height="110" fill="url(#headerGrad)"/>
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <path d="M22 72 L14 80 L22 88" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="195" y="78" font-family="SF Pro Display, Arial" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Disponibilidade</text>
+  <text x="195" y="96" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="middle">Controle quando você pode ser contactado</text>
+
+  <!-- Current status card -->
+  <rect x="16" y="122" width="358" height="80" rx="20" fill="#1e1e2e" filter="url(#shadow)"/>
+  <circle cx="52" cy="162" r="20" fill="#1a3e2a"/>
+  <circle cx="52" cy="162" r="8" fill="#00d4aa"/>
+  <circle cx="52" cy="162" r="4" fill="#00d4aa" opacity="0.4"/>
+  <circle cx="52" cy="162" r="12" fill="none" stroke="#00d4aa" stroke-width="2" opacity="0.3"/>
+  <text x="82" y="156" font-family="SF Pro Display, Arial" font-size="15" font-weight="700" fill="#ffffff">Status Atual</text>
+  <text x="82" y="174" font-family="SF Pro Display, Arial" font-size="13" fill="#00d4aa">● Disponível</text>
+  <rect x="290" y="150" width="76" height="26" rx="13" fill="#1e2e1e" stroke="#2d5e2d" stroke-width="1"/>
+  <text x="328" y="167" font-family="SF Pro Display, Arial" font-size="12" fill="#00d4aa" text-anchor="middle">até 18:00</text>
+
+  <!-- Schedule section -->
+  <text x="24" y="224" font-family="SF Pro Display, Arial" font-size="12" font-weight="600" fill="#4a5568" letter-spacing="1">PROGRAMAÇÃO SEMANAL</text>
+
+  <!-- Day schedule cards -->
+  <!-- Monday - Today (highlighted) -->
+  <rect x="16" y="234" width="358" height="60" rx="16" fill="#1e1e2e" stroke="#6c63ff" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="24" y="242" width="3" height="44" rx="1.5" fill="#6c63ff"/>
+  <text x="40" y="260" font-family="SF Pro Display, Arial" font-size="14" font-weight="700" fill="#ffffff">Segunda</text>
+  <text x="40" y="278" font-family="SF Pro Display, Arial" font-size="11" fill="#6c63ff">Hoje</text>
+
+  <!-- Time blocks visual -->
+  <rect x="130" y="244" width="210" height="36" rx="8" fill="#12121e"/>
+  <!-- Online block 09-18 -->
+  <rect x="130" y="244" width="105" height="36" rx="8" fill="#00a884" opacity="0.3"/>
+  <text x="182" y="260" font-family="SF Pro Display, Arial" font-size="10" fill="#00d4aa" text-anchor="middle">09:00</text>
+  <text x="182" y="274" font-family="SF Pro Display, Arial" font-size="10" fill="#00d4aa" text-anchor="middle">18:00</text>
+  <!-- DND block 22-08 -->
+  <rect x="290" y="244" width="50" height="36" rx="0" rx2="8" fill="#cc0000" opacity="0.2"/>
+  <text x="315" y="262" font-family="SF Pro Display, Arial" font-size="9" fill="#ff6b6b" text-anchor="middle">DND</text>
+  <text x="315" y="275" font-family="SF Pro Display, Arial" font-size="9" fill="#ff6b6b" text-anchor="middle">22-08h</text>
+
+  <!-- Edit icon -->
+  <circle cx="360" cy="264" r="14" fill="#1a1a3e"/>
+  <text x="360" y="269" font-family="SF Pro Display, Arial" font-size="12" fill="#6c63ff" text-anchor="middle">✎</text>
+
+  <!-- Tuesday -->
+  <rect x="16" y="304" width="358" height="56" rx="16" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="28" y="330" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4">Terça</text>
+  <rect x="130" y="314" width="210" height="32" rx="8" fill="#12121e"/>
+  <rect x="130" y="314" width="105" height="32" rx="8" fill="#00a884" opacity="0.25"/>
+  <text x="182" y="334" font-family="SF Pro Display, Arial" font-size="10" fill="#4a8a6a" text-anchor="middle">09:00 – 18:00</text>
+  <circle cx="360" cy="330" r="14" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="360" y="335" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568" text-anchor="middle">✎</text>
+
+  <!-- Wednesday -->
+  <rect x="16" y="370" width="358" height="56" rx="16" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="28" y="396" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4">Quarta</text>
+  <rect x="130" y="380" width="210" height="32" rx="8" fill="#12121e"/>
+  <rect x="130" y="380" width="125" height="32" rx="8" fill="#ffa94d" opacity="0.2"/>
+  <text x="192" y="400" font-family="SF Pro Display, Arial" font-size="10" fill="#ffa94d" text-anchor="middle">10:00 – 20:00</text>
+  <circle cx="360" cy="396" r="14" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="360" y="401" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568" text-anchor="middle">✎</text>
+
+  <!-- Thursday -->
+  <rect x="16" y="436" width="358" height="56" rx="16" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="28" y="462" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4">Quinta</text>
+  <rect x="130" y="446" width="210" height="32" rx="8" fill="#12121e"/>
+  <rect x="130" y="446" width="105" height="32" rx="8" fill="#00a884" opacity="0.25"/>
+  <text x="182" y="466" font-family="SF Pro Display, Arial" font-size="10" fill="#4a8a6a" text-anchor="middle">09:00 – 18:00</text>
+  <circle cx="360" cy="462" r="14" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="360" y="467" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568" text-anchor="middle">✎</text>
+
+  <!-- Friday -->
+  <rect x="16" y="502" width="358" height="56" rx="16" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="28" y="528" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4">Sexta</text>
+  <rect x="130" y="512" width="210" height="32" rx="8" fill="#12121e"/>
+  <rect x="130" y="512" width="84" height="32" rx="8" fill="#00a884" opacity="0.25"/>
+  <text x="172" y="532" font-family="SF Pro Display, Arial" font-size="10" fill="#4a8a6a" text-anchor="middle">09:00 – 14:00</text>
+  <circle cx="360" cy="528" r="14" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="360" y="533" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568" text-anchor="middle">✎</text>
+
+  <!-- Sat / Sun - off -->
+  <rect x="16" y="568" width="170" height="56" rx="16" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="28" y="594" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#2d2d2d">Sábado</text>
+  <text x="28" y="612" font-family="SF Pro Display, Arial" font-size="11" fill="#2d2d2d">Indisponível</text>
+
+  <rect x="204" y="568" width="170" height="56" rx="16" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="216" y="594" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#2d2d2d">Domingo</text>
+  <text x="216" y="612" font-family="SF Pro Display, Arial" font-size="11" fill="#2d2d2d">Indisponível</text>
+
+  <!-- Legend -->
+  <rect x="16" y="640" width="358" height="54" rx="14" fill="#111111"/>
+  <circle cx="44" cy="667" r="7" fill="#00a884"/>
+  <text x="58" y="671" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280">Disponível</text>
+  <circle cx="152" cy="667" r="7" fill="#ffa94d"/>
+  <text x="166" y="671" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280">Ocupado</text>
+  <circle cx="254" cy="667" r="7" fill="#ff4444"/>
+  <text x="268" y="671" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280">DND</text>
+
+  <!-- Toggles -->
+  <rect x="16" y="706" width="358" height="56" rx="16" fill="#111111"/>
+  <text x="32" y="732" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#ffffff">Receber notificações fora do horário</text>
+  <text x="32" y="750" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568">Apenas chamadas urgentes</text>
+  <!-- Toggle off -->
+  <rect x="306" y="724" width="46" height="26" rx="13" fill="#1e1e2e" stroke="#2d2d4e" stroke-width="1"/>
+  <circle cx="320" cy="737" r="11" fill="#4a5568"/>
+
+  <!-- Save button -->
+  <rect x="24" y="774" width="342" height="52" rx="26" fill="url(#saveBtn)"/>
+  <text x="195" y="805" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Salvar Programação</text>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>

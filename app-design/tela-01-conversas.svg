@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f0f"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="fabGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="fabShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#00d4aa" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <!-- Battery, Signal icons simplified -->
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+  <rect x="366" y="19" width="2" height="6" rx="1" fill="#ffffff"/>
+  <circle cx="325" cy="22" r="3" fill="#ffffff"/>
+  <circle cx="315" cy="22" r="3" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect width="390" height="110" fill="url(#headerGrad)"/>
+  <rect width="390" height="44" fill="#0f0f0f"/>
+
+  <!-- App Name -->
+  <text x="22" y="82" font-family="SF Pro Display, Arial" font-size="26" font-weight="700" fill="#ffffff">Sombra</text>
+  <text x="22" y="100" font-family="SF Pro Display, Arial" font-size="11" fill="#00d4aa" letter-spacing="2">MENSAGENS SEGURAS</text>
+
+  <!-- Header Icons -->
+  <!-- Search icon -->
+  <circle cx="310" cy="83" r="10" fill="none" stroke="#8892a4" stroke-width="1.8"/>
+  <line x1="317" y1="90" x2="322" y2="96" stroke="#8892a4" stroke-width="2" stroke-linecap="round"/>
+  <!-- Menu icon -->
+  <circle cx="355" cy="83" r="3" fill="#8892a4"/>
+  <circle cx="365" cy="83" r="3" fill="#8892a4"/>
+  <circle cx="375" cy="83" r="3" fill="#8892a4"/>
+
+  <!-- Tab Bar -->
+  <rect y="110" width="390" height="48" fill="#111111"/>
+  <!-- Tabs -->
+  <text x="52" y="140" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#00d4aa" text-anchor="middle">MENSAGENS</text>
+  <rect x="22" y="155" width="60" height="2" rx="1" fill="#00d4aa"/>
+
+  <text x="155" y="140" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#4a5568" text-anchor="middle">CHAMADAS</text>
+  <text x="260" y="140" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#4a5568" text-anchor="middle">TRANSMISSÃO</text>
+  <text x="350" y="140" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#4a5568" text-anchor="middle">CANAIS</text>
+
+  <!-- Search Bar -->
+  <rect x="16" y="166" width="358" height="40" rx="20" fill="#1e1e2e"/>
+  <circle cx="38" cy="186" r="7" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+  <line x1="43" y1="192" x2="47" y2="196" stroke="#4a5568" stroke-width="2" stroke-linecap="round"/>
+  <text x="54" y="191" font-family="SF Pro Display, Arial" font-size="14" fill="#4a5568">Pesquisar conversa...</text>
+
+  <!-- Conversation Items -->
+  <!-- Item 1 - with unread badge -->
+  <rect x="0" y="214" width="390" height="76" fill="#0f0f0f"/>
+  <!-- Avatar initials circle -->
+  <circle cx="48" cy="252" r="26" fill="#1a1a3e" stroke="#2d2d5e" stroke-width="1"/>
+  <text x="48" y="258" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#6c63ff" text-anchor="middle">AM</text>
+  <!-- Online indicator -->
+  <circle cx="68" cy="272" r="7" fill="#0f0f0f"/>
+  <circle cx="68" cy="272" r="5" fill="#00d4aa"/>
+  <!-- Name and message -->
+  <text x="86" y="244" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Ana Martins</text>
+  <text x="86" y="264" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">🔒 Mensagem expira em 2h</text>
+  <!-- Time and badge -->
+  <text x="360" y="244" font-family="SF Pro Display, Arial" font-size="12" fill="#00d4aa" text-anchor="end">14:32</text>
+  <circle cx="355" cy="265" r="11" fill="#00d4aa"/>
+  <text x="355" y="270" font-family="SF Pro Display, Arial" font-size="11" font-weight="700" fill="#0f0f0f" text-anchor="middle">3</text>
+  <!-- Divider -->
+  <line x1="86" y1="290" x2="390" y2="290" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Item 2 -->
+  <rect x="0" y="290" width="390" height="76" fill="#0f0f0f"/>
+  <circle cx="48" cy="328" r="26" fill="#1e2a1e" stroke="#2d5e2d" stroke-width="1"/>
+  <text x="48" y="334" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#00a884" text-anchor="middle">RF</text>
+  <text x="86" y="320" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Rafael Ferreira</text>
+  <text x="86" y="340" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">Você: Ok, te vejo amanhã</text>
+  <text x="360" y="320" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="end">Ontem</text>
+  <!-- Double check -->
+  <text x="86" y="358" font-family="SF Pro Display, Arial" font-size="10" fill="#00d4aa">✓✓ Lida</text>
+  <line x1="86" y1="366" x2="390" y2="366" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Item 3 - destruição ativa -->
+  <rect x="0" y="366" width="390" height="76" fill="#120d0d"/>
+  <circle cx="48" cy="404" r="26" fill="#2e1a1a" stroke="#5e2d2d" stroke-width="1"/>
+  <text x="48" y="410" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#ff6b6b" text-anchor="middle">LC</text>
+  <text x="86" y="396" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Lucas Carvalho</text>
+  <text x="86" y="416" font-family="SF Pro Display, Arial" font-size="13" fill="#ff6b6b">⏱ Expira em 45 min</text>
+  <text x="360" y="396" font-family="SF Pro Display, Arial" font-size="12" fill="#ff6b6b" text-anchor="end">13:15</text>
+  <circle cx="355" cy="417" r="11" fill="#ff6b6b"/>
+  <text x="355" y="422" font-family="SF Pro Display, Arial" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <line x1="86" y1="442" x2="390" y2="442" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Item 4 -->
+  <rect x="0" y="442" width="390" height="76" fill="#0f0f0f"/>
+  <circle cx="48" cy="480" r="26" fill="#1a1e2e" stroke="#2d365e" stroke-width="1"/>
+  <text x="48" y="486" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#4dabf7" text-anchor="middle">BS</text>
+  <text x="86" y="472" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Beatriz Santos</text>
+  <text x="86" y="492" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">📎 Imagem enviada</text>
+  <text x="360" y="472" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="end">Seg</text>
+  <line x1="86" y1="518" x2="390" y2="518" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Item 5 -->
+  <rect x="0" y="518" width="390" height="76" fill="#0f0f0f"/>
+  <circle cx="48" cy="556" r="26" fill="#1e1a2e" stroke="#4a2d5e" stroke-width="1"/>
+  <text x="48" y="562" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#cc5de8" text-anchor="middle">MO</text>
+  <text x="86" y="548" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Marcelo Oliveira</text>
+  <text x="86" y="568" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">🎵 Áudio - 0:32</text>
+  <text x="360" y="548" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="end">Dom</text>
+  <line x1="86" y1="594" x2="390" y2="594" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Item 6 -->
+  <rect x="0" y="594" width="390" height="76" fill="#0f0f0f"/>
+  <circle cx="48" cy="632" r="26" fill="#1e2a1a" stroke="#2d5e3a" stroke-width="1"/>
+  <text x="48" y="638" font-family="SF Pro Display, Arial" font-size="17" font-weight="700" fill="#51cf66" text-anchor="middle">JL</text>
+  <text x="86" y="624" font-family="SF Pro Display, Arial" font-size="16" font-weight="600" fill="#ffffff">Julia Lima</text>
+  <text x="86" y="644" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">📞 Chamada - 12 min</text>
+  <text x="360" y="624" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="end">Sáb</text>
+  <line x1="86" y1="670" x2="390" y2="670" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- FAB Button -->
+  <circle cx="335" cy="752" r="30" fill="url(#fabGrad)" filter="url(#fabShadow)"/>
+  <!-- Pencil icon -->
+  <path d="M328 759 L323 764 L326 767 L331 762 Z" fill="#0f0f0f"/>
+  <path d="M329 758 L334 754 L338 758 L333 762 Z" fill="#0f0f0f"/>
+  <line x1="323" y1="764" x2="322" y2="768" stroke="#0f0f0f" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Bottom Nav -->
+  <rect y="780" width="390" height="64" fill="#111111"/>
+  <line x1="0" y1="780" x2="390" y2="780" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Chat icon (active) -->
+  <rect x="18" y="793" width="22" height="18" rx="4" fill="none" stroke="#00d4aa" stroke-width="2"/>
+  <path d="M22 811 L18 816 L30 811" fill="#111111" stroke="#00d4aa" stroke-width="2" stroke-linejoin="round"/>
+  <text x="29" y="832" font-family="SF Pro Display, Arial" font-size="10" font-weight="600" fill="#00d4aa" text-anchor="middle">Chats</text>
+
+  <!-- Status icon -->
+  <circle cx="107" cy="802" r="9" fill="none" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="107" cy="802" r="5" fill="#4a5568"/>
+  <text x="107" y="832" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">Status</text>
+
+  <!-- Calls icon -->
+  <path d="M190 795 Q194 795 196 798 L197 802 Q198 804 196 805 L194 806 Q194 810 198 814 L199 815 Q200 813 202 813 L205 814 Q208 816 208 820 Q208 822 206 823 Q203 825 200 824 Q195 822 191 818 Q187 814 186 810 Q185 807 187 804 L188 801 Q190 798 190 795Z" fill="#4a5568"/>
+  <text x="197" y="832" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">Chamadas</text>
+
+  <!-- Settings icon -->
+  <circle cx="285" cy="803" r="8" fill="none" stroke="#4a5568" stroke-width="2"/>
+  <circle cx="285" cy="803" r="3" fill="#4a5568"/>
+  <text x="285" y="832" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">Config.</text>
+
+  <!-- Invite icon -->
+  <circle cx="363" cy="803" r="8" fill="none" stroke="#4a5568" stroke-width="2"/>
+  <text x="363" y="807" font-family="SF Pro Display, Arial" font-size="11" font-weight="700" fill="#4a5568" text-anchor="middle">+</text>
+  <text x="363" y="832" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">Convite</text>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>

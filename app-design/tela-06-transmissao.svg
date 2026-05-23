@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="createBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <linearGradient id="listCard1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2e1e"/>
+      <stop offset="100%" style="stop-color:#121e12"/>
+    </linearGradient>
+    <linearGradient id="listCard2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1a2e"/>
+      <stop offset="100%" style="stop-color:#12121e"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect width="390" height="110" fill="url(#headerGrad)"/>
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <path d="M22 72 L14 80 L22 88" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="195" y="78" font-family="SF Pro Display, Arial" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Lista de Transmissão</text>
+  <text x="195" y="96" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="middle">Envie para múltiplos contatos de uma vez</text>
+
+  <!-- Create new list button -->
+  <rect x="16" y="120" width="358" height="52" rx="16" fill="#1e2e1e" stroke="#2d5e2d" stroke-width="1"/>
+  <!-- Plus in circle -->
+  <circle cx="44" cy="146" r="16" fill="#00a884" opacity="0.2"/>
+  <line x1="44" y1="139" x2="44" y2="153" stroke="#00a884" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="37" y1="146" x2="51" y2="146" stroke="#00a884" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="70" y="150" font-family="SF Pro Display, Arial" font-size="15" font-weight="600" fill="#00d4aa">Nova Lista de Transmissão</text>
+
+  <!-- Section title -->
+  <text x="24" y="198" font-family="SF Pro Display, Arial" font-size="12" font-weight="600" fill="#4a5568" letter-spacing="1">MINHAS LISTAS</text>
+
+  <!-- List Card 1 - Equipe Trabalho -->
+  <rect x="16" y="210" width="358" height="110" rx="20" fill="url(#listCard1)" filter="url(#cardShadow)" stroke="#2d5e2d" stroke-width="1"/>
+
+  <!-- Member avatars stack -->
+  <circle cx="44" cy="250" r="20" fill="#1a3e1a"/>
+  <text x="44" y="256" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#51cf66" text-anchor="middle">RF</text>
+  <circle cx="60" cy="250" r="20" fill="#1a3e2a"/>
+  <text x="60" y="256" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#00a884" text-anchor="middle">AM</text>
+  <circle cx="76" cy="250" r="20" fill="#1e3e1a"/>
+  <text x="76" y="256" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#40c057" text-anchor="middle">JL</text>
+  <rect x="89" y="234" width="28" height="28" rx="14" fill="#0d1e0d" stroke="#2d5e2d" stroke-width="1"/>
+  <text x="103" y="252" font-family="SF Pro Display, Arial" font-size="11" fill="#4a8a4a" text-anchor="middle">+5</text>
+
+  <text x="130" y="244" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#ffffff">Equipe Trabalho</text>
+  <text x="130" y="262" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">8 membros</text>
+
+  <!-- Broadcast stats -->
+  <rect x="28" y="278" width="80" height="26" rx="13" fill="#0d1e0d"/>
+  <text x="68" y="295" font-family="SF Pro Display, Arial" font-size="11" fill="#51cf66" text-anchor="middle">↑ 3 enviados</text>
+  <rect x="118" y="278" width="90" height="26" rx="13" fill="#0d1e0d"/>
+  <text x="163" y="295" font-family="SF Pro Display, Arial" font-size="11" fill="#4a8a4a" text-anchor="middle">✓✓ 6 lidos</text>
+  <!-- Send button -->
+  <rect x="288" y="275" width="76" height="30" rx="15" fill="#00a884"/>
+  <text x="326" y="294" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#0f0f0f" text-anchor="middle">Enviar</text>
+
+  <!-- List Card 2 - Família -->
+  <rect x="16" y="334" width="358" height="110" rx="20" fill="url(#listCard2)" filter="url(#cardShadow)" stroke="#2d2d5e" stroke-width="1"/>
+
+  <circle cx="44" cy="374" r="20" fill="#1a1a3e"/>
+  <text x="44" y="380" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#6c63ff" text-anchor="middle">BS</text>
+  <circle cx="60" cy="374" r="20" fill="#1e1a3e"/>
+  <text x="60" y="380" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#845ef7" text-anchor="middle">MO</text>
+  <circle cx="76" cy="374" r="20" fill="#1a1e3e"/>
+  <text x="76" y="380" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#748ffc" text-anchor="middle">LC</text>
+
+  <text x="108" y="368" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#ffffff">Família</text>
+  <text x="108" y="386" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">3 membros</text>
+
+  <rect x="28" y="402" width="90" height="26" rx="13" fill="#12121e"/>
+  <text x="73" y="419" font-family="SF Pro Display, Arial" font-size="11" fill="#6c63ff" text-anchor="middle">↑ 1 enviado</text>
+  <rect x="288" y="399" width="76" height="30" rx="15" fill="#1e1e3e" stroke="#4a3ff7" stroke-width="1"/>
+  <text x="326" y="418" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#6c63ff" text-anchor="middle">Enviar</text>
+
+  <!-- List Card 3 - Amigos -->
+  <rect x="16" y="458" width="358" height="110" rx="20" fill="#1a1a1a" filter="url(#cardShadow)" stroke="#2d2d2d" stroke-width="1"/>
+
+  <circle cx="44" cy="498" r="20" fill="#2e1a1a"/>
+  <text x="44" y="504" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#ff6b6b" text-anchor="middle">KR</text>
+  <circle cx="60" cy="498" r="20" fill="#2e2a1a"/>
+  <text x="60" y="504" font-family="SF Pro Display, Arial" font-size="12" font-weight="700" fill="#ffa94d" text-anchor="middle">PT</text>
+  <rect x="73" y="482" width="28" height="28" rx="14" fill="#1a1a1a" stroke="#3d3d3d" stroke-width="1"/>
+  <text x="87" y="500" font-family="SF Pro Display, Arial" font-size="11" fill="#4a4a4a" text-anchor="middle">+3</text>
+
+  <text x="112" y="492" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#ffffff">Amigos</text>
+  <text x="112" y="510" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280">5 membros</text>
+
+  <rect x="28" y="526" width="110" height="26" rx="13" fill="#1a1a1a"/>
+  <text x="83" y="543" font-family="SF Pro Display, Arial" font-size="11" fill="#4a5568" text-anchor="middle">Nenhum enviado</text>
+  <rect x="288" y="523" width="76" height="30" rx="15" fill="#1e1e2e" stroke="#2d2d4e" stroke-width="1"/>
+  <text x="326" y="542" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#4a5568" text-anchor="middle">Enviar</text>
+
+  <!-- New broadcast compose area -->
+  <rect x="16" y="586" width="358" height="100" rx="20" fill="#111111" stroke="#1e1e1e" stroke-width="1"/>
+  <text x="40" y="614" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#ffffff">Mensagem para todas as listas</text>
+
+  <!-- Input -->
+  <rect x="28" y="624" width="256" height="46" rx="14" fill="#1e1e2e"/>
+  <text x="44" y="651" font-family="SF Pro Display, Arial" font-size="13" fill="#4a5568">Escreva sua mensagem...</text>
+
+  <!-- Timer badge -->
+  <rect x="290" y="624" width="46" height="22" rx="11" fill="#1a1a3e"/>
+  <text x="313" y="639" font-family="SF Pro Display, Arial" font-size="10" fill="#6c63ff" text-anchor="middle">⏱ 1h</text>
+
+  <!-- Broadcast send button -->
+  <circle cx="354" cy="647" r="22" fill="#00a884"/>
+  <path d="M345 641 L363 647 L345 653 L348 647 Z" fill="#ffffff"/>
+
+  <!-- Stats bar -->
+  <rect x="16" y="700" width="358" height="58" rx="16" fill="#111111"/>
+  <text x="195" y="724" font-family="SF Pro Display, Arial" font-size="12" font-weight="600" fill="#6b7280" text-anchor="middle">ESTATÍSTICAS GERAIS</text>
+  <text x="80" y="748" font-family="SF Pro Display, Arial" font-size="22" font-weight="700" fill="#00d4aa" text-anchor="middle">16</text>
+  <text x="80" y="760" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">contatos</text>
+  <text x="195" y="748" font-family="SF Pro Display, Arial" font-size="22" font-weight="700" fill="#6c63ff" text-anchor="middle">4</text>
+  <text x="195" y="760" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">enviados</text>
+  <text x="315" y="748" font-family="SF Pro Display, Arial" font-size="22" font-weight="700" fill="#51cf66" text-anchor="middle">12</text>
+  <text x="315" y="760" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="middle">lidos</text>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>

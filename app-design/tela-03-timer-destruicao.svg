@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="sheetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f0f1e"/>
+    </linearGradient>
+    <linearGradient id="activeOption" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c63ff"/>
+      <stop offset="100%" style="stop-color:#4a3ff7"/>
+    </linearGradient>
+    <linearGradient id="confirmBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <filter id="sheetShadow">
+      <feDropShadow dx="0" dy="-8" stdDeviation="20" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="optionGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#6c63ff" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Blurred background (chat) -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+  <!-- Background overlay dim -->
+  <rect width="390" height="844" fill="#000000" opacity="0.7"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f" opacity="0.8"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+
+  <!-- Bottom Sheet -->
+  <rect x="0" y="280" width="390" height="564" rx="28" fill="url(#sheetGrad)" filter="url(#sheetShadow)"/>
+  <!-- Sheet handle -->
+  <rect x="170" y="296" width="50" height="4" rx="2" fill="#2d2d4e"/>
+
+  <!-- Title -->
+  <text x="195" y="342" font-family="SF Pro Display, Arial" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Tempo de Visualização</text>
+  <text x="195" y="364" font-family="SF Pro Display, Arial" font-size="13" fill="#6b7280" text-anchor="middle">Mensagem será destruída após ser lida</text>
+
+  <!-- Icon -->
+  <circle cx="195" cy="312" r="0" fill="none"/>
+
+  <!-- Timer visual ring -->
+  <circle cx="195" cy="460" r="70" fill="none" stroke="#1e1e3e" stroke-width="12"/>
+  <circle cx="195" cy="460" r="70" fill="none" stroke="#6c63ff" stroke-width="12" stroke-dasharray="220 220" stroke-dashoffset="110" stroke-linecap="round" transform="rotate(-90 195 460)"/>
+  <circle cx="195" cy="460" r="55" fill="#12121e"/>
+
+  <!-- Selected time display -->
+  <text x="195" y="450" font-family="SF Pro Display, Arial" font-size="36" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="195" y="474" font-family="SF Pro Display, Arial" font-size="14" fill="#6c63ff" text-anchor="middle">minutos</text>
+
+  <!-- Time option grid -->
+  <!-- Row 1 -->
+  <rect x="24" y="548" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="64" y="574" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">30 seg</text>
+
+  <rect x="116" y="548" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="156" y="574" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">1 min</text>
+
+  <rect x="208" y="548" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="248" y="574" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">5 min</text>
+
+  <rect x="300" y="548" width="72" height="44" rx="14" fill="url(#activeOption)" filter="url(#optionGlow)"/>
+  <text x="336" y="574" font-family="SF Pro Display, Arial" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">15 min</text>
+
+  <!-- Row 2 -->
+  <rect x="24" y="604" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="64" y="630" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">1 hora</text>
+
+  <rect x="116" y="604" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="156" y="630" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">6 horas</text>
+
+  <rect x="208" y="604" width="80" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="248" y="630" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">24 horas</text>
+
+  <rect x="300" y="604" width="72" height="44" rx="14" fill="#1e1e2e"/>
+  <text x="336" y="630" font-family="SF Pro Display, Arial" font-size="14" font-weight="600" fill="#8892a4" text-anchor="middle">7 dias</text>
+
+  <!-- Toggle: only after read OR after time -->
+  <rect x="24" y="664" width="342" height="64" rx="16" fill="#12121e"/>
+  <text x="40" y="690" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">Destruir após leitura</text>
+  <text x="40" y="710" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568">Apaga quando o destinatário ler</text>
+  <!-- Toggle on -->
+  <rect x="306" y="678" width="46" height="26" rx="13" fill="#6c63ff"/>
+  <circle cx="332" cy="691" r="11" fill="#ffffff"/>
+
+  <!-- Confirm button -->
+  <rect x="24" y="744" width="342" height="54" rx="27" fill="url(#confirmBtn)"/>
+  <text x="195" y="776" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#0f0f0f" text-anchor="middle">Confirmar · 15 minutos</text>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>

@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="sentBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#005c4b"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <linearGradient id="inputGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#111122"/>
+    </linearGradient>
+    <filter id="bubbleShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background with subtle pattern -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- Subtle chat wallpaper dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="1" fill="#1a1a1a"/>
+  </pattern>
+  <rect y="100" width="390" height="680" fill="url(#dots)" opacity="0.5"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+  <rect x="366" y="19" width="2" height="6" rx="1" fill="#ffffff"/>
+
+  <!-- Chat Header -->
+  <rect width="390" height="100" fill="url(#headerGrad)"/>
+  <rect width="390" height="44" fill="#0f0f0f"/>
+
+  <!-- Back arrow -->
+  <path d="M22 72 L14 80 L22 88" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Avatar -->
+  <circle cx="56" cy="80" r="22" fill="#1a1a3e" stroke="#2d2d5e" stroke-width="1.5"/>
+  <text x="56" y="86" font-family="SF Pro Display, Arial" font-size="14" font-weight="700" fill="#6c63ff" text-anchor="middle">AM</text>
+  <!-- Online dot -->
+  <circle cx="72" cy="94" r="5" fill="#0f0f0f"/>
+  <circle cx="72" cy="94" r="3.5" fill="#00d4aa"/>
+
+  <!-- Contact name and status -->
+  <text x="86" y="74" font-family="SF Pro Display, Arial" font-size="16" font-weight="700" fill="#ffffff">Ana Martins</text>
+  <text x="86" y="92" font-family="SF Pro Display, Arial" font-size="12" fill="#00d4aa">● online</text>
+
+  <!-- Header action icons -->
+  <!-- Video call -->
+  <rect x="302" y="65" width="30" height="30" rx="15" fill="#1e1e3e"/>
+  <path d="M309 75 L309 83 L315 80 Z" fill="#8892a4"/>
+  <rect x="309" y="74" width="8" height="10" rx="2" fill="none" stroke="#8892a4" stroke-width="1.5"/>
+  <path d="M317 76 L321 74 L321 84 L317 82" fill="none" stroke="#8892a4" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Audio call -->
+  <rect x="340" y="65" width="30" height="30" rx="15" fill="#1e1e3e"/>
+  <path d="M350 70 Q354 70 355 72 L356 75 Q357 76 355 77 L354 77 Q354 80 357 83 L357 84 Q359 82 360 82 L362 83 Q364 84 364 87 Q364 88 363 89 Q361 90 359 89 Q355 88 352 85 Q349 82 348 79 Q347 77 348 75 L349 73 Q350 71 350 70Z" fill="#8892a4"/>
+
+  <!-- Timer indicator in header -->
+  <rect x="86" y="96" width="80" height="1" fill="#2d2d4e"/>
+  <!-- Destroy timer badge -->
+  <rect x="270" y="68" width="28" height="16" rx="8" fill="#ff4444" opacity="0.15"/>
+  <text x="284" y="79" font-family="SF Pro Display, Arial" font-size="9" fill="#ff6b6b" text-anchor="middle">⏱ 2h</text>
+
+  <!-- Messages Area -->
+  <!-- Date separator -->
+  <rect x="145" y="115" width="100" height="22" rx="11" fill="#1a1a2e" opacity="0.9"/>
+  <text x="195" y="130" font-family="SF Pro Display, Arial" font-size="11" fill="#8892a4" text-anchor="middle">Hoje</text>
+
+  <!-- Received message 1 -->
+  <rect x="16" y="148" width="220" height="52" rx="16" rx2="4" fill="#1e1e2e" filter="url(#bubbleShadow)"/>
+  <path d="M16 168 L8 175 L16 182" fill="#1e1e2e"/>
+  <text x="30" y="170" font-family="SF Pro Display, Arial" font-size="14" fill="#e2e8f0">Oi! Tudo bem?</text>
+  <text x="30" y="188" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280">Aquela ideia ficou ótima 🔥</text>
+  <text x="225" y="192" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="end">14:28</text>
+
+  <!-- Sent message 1 -->
+  <rect x="154" y="212" width="220" height="38" rx="16" rx2="4" fill="url(#sentBubble)" filter="url(#bubbleShadow)"/>
+  <path d="M374 222 L382 229 L374 236" fill="#00a884"/>
+  <text x="168" y="228" font-family="SF Pro Display, Arial" font-size="14" fill="#ffffff">Sim!! Que bom 😊</text>
+  <text x="362" y="244" font-family="SF Pro Display, Arial" font-size="10" fill="#00d4aa" text-anchor="end">14:29 ✓✓</text>
+
+  <!-- Received message 2 -->
+  <rect x="16" y="262" width="250" height="54" rx="16" rx2="4" fill="#1e1e2e" filter="url(#bubbleShadow)"/>
+  <path d="M16 278 L8 285 L16 292" fill="#1e1e2e"/>
+  <text x="30" y="282" font-family="SF Pro Display, Arial" font-size="14" fill="#e2e8f0">Posso te mandar os arquivos</text>
+  <text x="30" y="300" font-family="SF Pro Display, Arial" font-size="14" fill="#e2e8f0">esta tarde?</text>
+  <text x="255" y="308" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="end">14:30</text>
+
+  <!-- Media message (received) -->
+  <rect x="16" y="328" width="200" height="160" rx="16" rx2="4" fill="#1a2a2a" filter="url(#bubbleShadow)"/>
+  <rect x="16" y="328" width="200" height="140" rx="12" fill="#0d2020"/>
+  <!-- Image placeholder -->
+  <rect x="30" y="340" width="172" height="116" rx="8" fill="#0a1a1a"/>
+  <text x="116" y="395" font-family="SF Pro Display, Arial" font-size="30" text-anchor="middle">🖼️</text>
+  <text x="116" y="420" font-family="SF Pro Display, Arial" font-size="12" fill="#4a6568" text-anchor="middle">foto_projeto.jpg · 2.4 MB</text>
+  <text x="200" y="482" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="end">14:31</text>
+
+  <!-- Sent message 2 -->
+  <rect x="154" y="500" width="220" height="38" rx="16" rx2="4" fill="url(#sentBubble)" filter="url(#bubbleShadow)"/>
+  <path d="M374 510 L382 517 L374 524" fill="#00a884"/>
+  <text x="168" y="516" font-family="SF Pro Display, Arial" font-size="14" fill="#ffffff">Pode sim! Aguardo 👍</text>
+  <text x="362" y="532" font-family="SF Pro Display, Arial" font-size="10" fill="#00d4aa" text-anchor="end">14:32 ✓✓</text>
+
+  <!-- Received audio message -->
+  <rect x="16" y="546" width="230" height="56" rx="16" rx2="4" fill="#1e1e2e" filter="url(#bubbleShadow)"/>
+  <path d="M16 562 L8 569 L16 576" fill="#1e1e2e"/>
+  <!-- Play button -->
+  <circle cx="42" cy="574" r="18" fill="#00a884"/>
+  <path d="M38 567 L38 581 L50 574 Z" fill="#ffffff"/>
+  <!-- Waveform -->
+  <rect x="68" y="570" width="3" height="8" rx="1.5" fill="#4a5568"/>
+  <rect x="74" y="566" width="3" height="16" rx="1.5" fill="#4a5568"/>
+  <rect x="80" y="569" width="3" height="10" rx="1.5" fill="#00d4aa"/>
+  <rect x="86" y="564" width="3" height="20" rx="1.5" fill="#00d4aa"/>
+  <rect x="92" y="568" width="3" height="12" rx="1.5" fill="#00d4aa"/>
+  <rect x="98" y="565" width="3" height="18" rx="1.5" fill="#4a5568"/>
+  <rect x="104" y="570" width="3" height="8" rx="1.5" fill="#4a5568"/>
+  <rect x="110" y="567" width="3" height="14" rx="1.5" fill="#4a5568"/>
+  <rect x="116" y="569" width="3" height="10" rx="1.5" fill="#4a5568"/>
+  <rect x="122" y="566" width="3" height="16" rx="1.5" fill="#4a5568"/>
+  <rect x="128" y="571" width="3" height="6" rx="1.5" fill="#4a5568"/>
+  <text x="68" y="596" font-family="SF Pro Display, Arial" font-size="10" fill="#6b7280">0:32</text>
+  <text x="235" y="596" font-family="SF Pro Display, Arial" font-size="10" fill="#4a5568" text-anchor="end">14:31</text>
+
+  <!-- Destroy timer warning -->
+  <rect x="95" y="615" width="200" height="28" rx="14" fill="#2d1a1a"/>
+  <text x="195" y="633" font-family="SF Pro Display, Arial" font-size="12" fill="#ff6b6b" text-anchor="middle">⏱ Mensagens expiram em 1h 48min</text>
+
+  <!-- Input Area Background -->
+  <rect y="660" width="390" height="120" fill="#111111"/>
+  <line x1="0" y1="660" x2="390" y2="660" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Input Bar -->
+  <rect x="12" y="672" width="290" height="48" rx="24" fill="#1e1e2e"/>
+
+  <!-- Attachment icon -->
+  <path d="M32 696 L32 692 Q32 684 40 684 L48 684 Q56 684 56 692 L56 700 Q56 706 50 706 L44 706 Q40 706 40 702 L40 694 Q40 692 42 692 L46 692 Q48 692 48 694 L48 700" fill="none" stroke="#8892a4" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Text input placeholder -->
+  <text x="68" y="701" font-family="SF Pro Display, Arial" font-size="15" fill="#4a5568">Mensagem segura...</text>
+
+  <!-- Emoji icon -->
+  <circle cx="274" cy="696" r="10" fill="none" stroke="#8892a4" stroke-width="1.5"/>
+  <circle cx="270" cy="693" r="1.5" fill="#8892a4"/>
+  <circle cx="278" cy="693" r="1.5" fill="#8892a4"/>
+  <path d="M270 699 Q274 703 278 699" fill="none" stroke="#8892a4" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Timer selector button -->
+  <circle cx="315" cy="696" r="22" fill="#1a1a3e" stroke="#2d2d5e" stroke-width="1.5"/>
+  <text x="315" y="692" font-family="SF Pro Display, Arial" font-size="10" fill="#6c63ff" text-anchor="middle">⏱</text>
+  <text x="315" y="705" font-family="SF Pro Display, Arial" font-size="9" font-weight="700" fill="#6c63ff" text-anchor="middle">2h</text>
+
+  <!-- Send / Mic button -->
+  <circle cx="363" cy="696" r="22" fill="#00a884"/>
+  <!-- Mic icon -->
+  <rect x="357" y="684" width="12" height="18" rx="6" fill="#ffffff"/>
+  <path d="M352 698 Q352 710 363 710 Q374 710 374 698" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="363" y1="710" x2="363" y2="716" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="358" y1="716" x2="368" y2="716" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>

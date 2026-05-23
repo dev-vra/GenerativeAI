@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="sendBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a884"/>
+    </linearGradient>
+    <linearGradient id="imgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2e3e"/>
+      <stop offset="100%" style="stop-color:#0d1e2e"/>
+    </linearGradient>
+    <linearGradient id="imgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e1a3e"/>
+      <stop offset="100%" style="stop-color:#1e0d2e"/>
+    </linearGradient>
+    <linearGradient id="imgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3e1a"/>
+      <stop offset="100%" style="stop-color:#0d2e0d"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- Status Bar -->
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <text x="20" y="28" font-family="SF Pro Display, Arial" font-size="13" font-weight="600" fill="#ffffff">9:41</text>
+  <rect x="340" y="16" width="24" height="12" rx="3" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <rect x="342" y="18" width="16" height="8" rx="1.5" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect width="390" height="100" fill="url(#headerGrad)"/>
+  <rect width="390" height="44" fill="#0f0f0f"/>
+  <path d="M22 72 L14 80 L22 88" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="195" y="78" font-family="SF Pro Display, Arial" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Compartilhar Mídia</text>
+  <text x="195" y="96" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280" text-anchor="middle">Selecione o que deseja enviar</text>
+
+  <!-- Quick action pills -->
+  <rect x="16" y="112" width="390" height="52" fill="#0f0f0f"/>
+
+  <!-- Camera -->
+  <rect x="16" y="118" width="72" height="38" rx="19" fill="#1e1e2e"/>
+  <rect x="28" y="128" width="14" height="10" rx="3" fill="none" stroke="#6c63ff" stroke-width="1.5"/>
+  <circle cx="35" cy="133" r="3" fill="none" stroke="#6c63ff" stroke-width="1"/>
+  <text x="46" y="140" font-family="SF Pro Display, Arial" font-size="11" fill="#6c63ff">Câmera</text>
+
+  <!-- Gallery -->
+  <rect x="96" y="118" width="68" height="38" rx="19" fill="#1e1e2e"/>
+  <rect x="106" y="128" width="14" height="10" rx="3" fill="none" stroke="#845ef7" stroke-width="1.5"/>
+  <circle cx="112" cy="132" r="2.5" fill="#845ef7"/>
+  <path d="M106 136 L109 132 L113 136 L116 130 L120 136" fill="none" stroke="#845ef7" stroke-width="1.2"/>
+  <text x="126" y="140" font-family="SF Pro Display, Arial" font-size="11" fill="#845ef7">Galeria</text>
+
+  <!-- Document -->
+  <rect x="172" y="118" width="80" height="38" rx="19" fill="#1e1e2e"/>
+  <rect x="182" y="127" width="10" height="13" rx="2" fill="none" stroke="#4dabf7" stroke-width="1.5"/>
+  <line x1="184" y1="131" x2="190" y2="131" stroke="#4dabf7" stroke-width="1"/>
+  <line x1="184" y1="134" x2="190" y2="134" stroke="#4dabf7" stroke-width="1"/>
+  <text x="198" y="140" font-family="SF Pro Display, Arial" font-size="11" fill="#4dabf7">Arquivo</text>
+
+  <!-- Audio -->
+  <rect x="260" y="118" width="64" height="38" rx="19" fill="#1e1e2e"/>
+  <path d="M272 135 Q272 129 278 129 Q284 129 284 135 L284 138 Q284 144 278 144 Q272 144 272 138 Z" fill="none" stroke="#ffa94d" stroke-width="1.5"/>
+  <path d="M269 138 Q269 147 278 147 Q287 147 287 138" fill="none" stroke="#ffa94d" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="292" y="140" font-family="SF Pro Display, Arial" font-size="11" fill="#ffa94d">Áudio</text>
+
+  <!-- Location -->
+  <rect x="332" y="118" width="46" height="38" rx="19" fill="#1e1e2e"/>
+  <path d="M349 126 Q355 126 355 134 Q355 140 349 146 Q343 140 343 134 Q343 126 349 126 Z" fill="none" stroke="#ff6b6b" stroke-width="1.5"/>
+  <circle cx="349" cy="134" r="3" fill="#ff6b6b"/>
+
+  <!-- Media Grid -->
+  <text x="16" y="178" font-family="SF Pro Display, Arial" font-size="12" font-weight="600" fill="#4a5568" letter-spacing="1">GALERIA RECENTE</text>
+
+  <!-- Row 1 of media -->
+  <rect x="4" y="186" width="124" height="124" rx="12" fill="url(#imgGrad1)" filter="url(#cardShadow)"/>
+  <text x="66" y="248" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🏙️</text>
+  <text x="66" y="272" font-family="SF Pro Display, Arial" font-size="10" fill="#4a6878" text-anchor="middle">foto_01.jpg</text>
+  <!-- Selected indicator -->
+  <circle cx="116" cy="200" r="14" fill="#0f0f0f"/>
+  <circle cx="116" cy="200" r="12" fill="#6c63ff"/>
+  <text x="116" y="205" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+
+  <rect x="133" y="186" width="124" height="124" rx="12" fill="url(#imgGrad2)" filter="url(#cardShadow)"/>
+  <text x="195" y="248" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🌊</text>
+  <text x="195" y="272" font-family="SF Pro Display, Arial" font-size="10" fill="#6a4a78" text-anchor="middle">foto_02.jpg</text>
+  <circle cx="245" cy="200" r="14" fill="#0f0f0f"/>
+  <circle cx="245" cy="200" r="12" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+
+  <rect x="262" y="186" width="124" height="124" rx="12" fill="url(#imgGrad3)" filter="url(#cardShadow)"/>
+  <text x="324" y="248" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🌿</text>
+  <text x="324" y="272" font-family="SF Pro Display, Arial" font-size="10" fill="#4a7850" text-anchor="middle">foto_03.jpg</text>
+  <circle cx="374" cy="200" r="14" fill="#0f0f0f"/>
+  <circle cx="374" cy="200" r="12" fill="#6c63ff"/>
+  <text x="374" y="205" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- Row 2 -->
+  <rect x="4" y="318" width="124" height="124" rx="12" fill="#1a1a2e" filter="url(#cardShadow)"/>
+  <text x="66" y="380" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🎵</text>
+  <!-- Video play overlay -->
+  <rect x="4" y="318" width="124" height="124" rx="12" fill="#000000" opacity="0.3"/>
+  <circle cx="66" cy="380" r="18" fill="#000000" opacity="0.6"/>
+  <path d="M60 372 L60 388 L74 380 Z" fill="#ffffff"/>
+  <text x="66" y="434" font-family="SF Pro Display, Arial" font-size="9" fill="#4a5568" text-anchor="middle">video_01.mp4 · 0:45</text>
+  <circle cx="116" cy="332" r="14" fill="#0f0f0f"/>
+  <circle cx="116" cy="332" r="12" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+
+  <rect x="133" y="318" width="124" height="124" rx="12" fill="#2e1a1a" filter="url(#cardShadow)"/>
+  <text x="195" y="380" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🌅</text>
+  <text x="195" y="434" font-family="SF Pro Display, Arial" font-size="10" fill="#7a4a4a" text-anchor="middle">foto_04.jpg</text>
+  <circle cx="245" cy="332" r="14" fill="#0f0f0f"/>
+  <circle cx="245" cy="332" r="12" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+
+  <rect x="262" y="318" width="124" height="124" rx="12" fill="#1a2e2e" filter="url(#cardShadow)"/>
+  <text x="324" y="380" font-family="SF Pro Display, Arial" font-size="32" text-anchor="middle">🏔️</text>
+  <text x="324" y="434" font-family="SF Pro Display, Arial" font-size="10" fill="#4a6a7a" text-anchor="middle">foto_05.jpg</text>
+  <circle cx="374" cy="332" r="14" fill="#0f0f0f"/>
+  <circle cx="374" cy="332" r="12" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+
+  <!-- Documents section -->
+  <text x="16" y="466" font-family="SF Pro Display, Arial" font-size="12" font-weight="600" fill="#4a5568" letter-spacing="1">ARQUIVOS RECENTES</text>
+
+  <!-- Doc 1 -->
+  <rect x="16" y="476" width="358" height="54" rx="14" fill="#111111"/>
+  <rect x="28" y="488" width="32" height="38" rx="6" fill="#1a1a3e"/>
+  <text x="44" y="508" font-family="SF Pro Display, Arial" font-size="10" font-weight="700" fill="#6c63ff" text-anchor="middle">PDF</text>
+  <text x="72" y="500" font-family="SF Pro Display, Arial" font-size="14" fill="#ffffff">relatorio_2024.pdf</text>
+  <text x="72" y="518" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568">2.4 MB · Hoje</text>
+  <circle cx="360" cy="503" r="14" fill="#1e1e2e"/>
+  <circle cx="360" cy="503" r="12" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+
+  <!-- Doc 2 -->
+  <rect x="16" y="538" width="358" height="54" rx="14" fill="#111111"/>
+  <rect x="28" y="550" width="32" height="38" rx="6" fill="#1e2e1a"/>
+  <text x="44" y="570" font-family="SF Pro Display, Arial" font-size="10" font-weight="700" fill="#51cf66" text-anchor="middle">XLS</text>
+  <text x="72" y="562" font-family="SF Pro Display, Arial" font-size="14" fill="#ffffff">planilha_dados.xlsx</text>
+  <text x="72" y="580" font-family="SF Pro Display, Arial" font-size="12" fill="#4a5568">892 KB · Ontem</text>
+  <circle cx="360" cy="565" r="14" fill="#1e2e1a"/>
+  <circle cx="360" cy="565" r="12" fill="#51cf66"/>
+  <text x="360" y="570" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- Bottom send bar -->
+  <rect y="612" width="390" height="116" fill="#111111"/>
+  <line x1="0" y1="612" x2="390" y2="612" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Selected items preview -->
+  <text x="24" y="634" font-family="SF Pro Display, Arial" font-size="12" fill="#6b7280">3 itens selecionados</text>
+
+  <!-- Preview thumbnails -->
+  <rect x="24" y="644" width="48" height="48" rx="10" fill="url(#imgGrad1)"/>
+  <text x="48" y="673" font-family="SF Pro Display, Arial" font-size="16" text-anchor="middle">🏙️</text>
+
+  <rect x="80" y="644" width="48" height="48" rx="10" fill="url(#imgGrad3)"/>
+  <text x="104" y="673" font-family="SF Pro Display, Arial" font-size="16" text-anchor="middle">🌿</text>
+
+  <rect x="136" y="644" width="48" height="48" rx="10" fill="#1e2e1a"/>
+  <text x="160" y="673" font-family="SF Pro Display, Arial" font-size="16" text-anchor="middle">📊</text>
+
+  <!-- Timer destruição -->
+  <rect x="200" y="648" width="60" height="38" rx="12" fill="#1a1a3e"/>
+  <text x="230" y="663" font-family="SF Pro Display, Arial" font-size="9" fill="#6c63ff" text-anchor="middle">Auto-deletar</text>
+  <text x="230" y="678" font-family="SF Pro Display, Arial" font-size="13" font-weight="700" fill="#6c63ff" text-anchor="middle">24h</text>
+
+  <!-- Send button -->
+  <rect x="270" y="640" width="104" height="56" rx="28" fill="url(#sendBtn)"/>
+  <text x="322" y="665" font-family="SF Pro Display, Arial" font-size="14" font-weight="700" fill="#0f0f0f" text-anchor="middle">Enviar</text>
+  <text x="322" y="682" font-family="SF Pro Display, Arial" font-size="12" fill="#0f0f0f" text-anchor="middle">3 arquivos</text>
+
+  <!-- Home indicator -->
+  <rect x="155" y="826" width="80" height="4" rx="2" fill="#333333"/>
+</svg>
